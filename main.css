@@ -3,14 +3,28 @@ body {
   margin-inline: auto;
 }
 
+table, th, td {
+  border: 1px outset black;
+}
+
 img {
   display: block;
+  max-width: 100%;
+}
+
+.homeImage {
   width: 67%;
 
   border: 4px solid black;
   padding: 1em;
 }
 
-table, th, td {
-  border: 1px outset black;
+.hobbies {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+}
+
+.hobbies > * {
+  margin-left: 3em;
 }
