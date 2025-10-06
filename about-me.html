@@ -6,6 +6,23 @@
     <link rel="stylesheet" href="main.css" />
 
     <title>About Me</title>
+
+    <script>
+      // function addToList(list, newText) {
+      //   const newListItem = document.createElement("li");
+      //   newListItem.textContent = newText;
+      //   list.append(newListItem);
+      // }
+
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   addToList(document.querySelector("#hobbies"), "Testing");
+      // });
+
+      const list = [];
+      function addToList(newText) {
+        list.push(newText);
+      }
+    </script>
   </head>
   <body>
     <h1>About Me</h1>
@@ -21,7 +38,7 @@
     >
 
     <p>Hobbies and favorite things:</p>
-    <ul class="hobbies">
+    <ul id="hobbies" class="hobbies">
       <li>Playing go</li>
       <li>Tuliptrees</li>
       <li>Rain</li>
