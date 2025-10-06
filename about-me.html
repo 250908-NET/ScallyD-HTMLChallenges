@@ -26,6 +26,15 @@
       function printList() {
         alert(list.join(", "));
       }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("#listAdd").addEventListener("click", () => {
+          addToList("test item");
+        });
+        document.querySelector("#listPrint").addEventListener("click", () => {
+          printList();
+        });
+      });
     </script>
   </head>
   <body>
@@ -61,5 +70,10 @@
         >Unsplash</a
       >.</p
     >
+
+    <div>
+      <button id="listAdd" type="button">Add a test item to the list</button>
+      <button id="listPrint" type="button">Print list of items</button>
+    </div>
   </body>
 </html>
