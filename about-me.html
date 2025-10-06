@@ -34,6 +34,13 @@
         document.querySelector("#listPrint").addEventListener("click", () => {
           printList();
         });
+        document
+          .querySelector("#listAddCustom")
+          .addEventListener("click", (evt) => {
+            const newListItemField = document.querySelector("#newListItem");
+            addToList(newListItemField.value);
+            newListItemField.value = "";
+          });
       });
     </script>
   </head>
@@ -72,8 +79,22 @@
     >
 
     <div>
-      <button id="listAdd" type="button">Add a test item to the list</button>
-      <button id="listPrint" type="button">Print list of items</button>
+      <div
+        ><button id="listAdd" type="button"
+          >Add a test item to the list</button
+        ></div
+      >
+      <div
+        ><label
+          >New list item text:
+          <input id="newListItem" name="newListItem" type="text" /></label
+        ><button id="listAddCustom" type="button"
+          >Add a custom item to the list</button
+        ></div
+      >
+      <div
+        ><button id="listPrint" type="button">Print list of items</button></div
+      >
     </div>
   </body>
 </html>
